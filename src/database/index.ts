@@ -4,7 +4,7 @@ const config = {
     HOST: 'localhost',
     USER: 'root',
     PASSWORD: 'password',
-    DB: 'test',
+    DB: 'simpleOnlineMart',
 };
 
 export const getConnection = async () => {
