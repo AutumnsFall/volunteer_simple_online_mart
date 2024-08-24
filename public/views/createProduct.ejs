@@ -9,7 +9,11 @@
             <div>
                 <h1 class="text-center">Create Product</h1>
             </div>
-            
+            <% if (product) { %>
+                <div class="alert alert-success text-center" role="alert">
+                    Your product has been created successfully.
+                </div>
+            <% } %>
             <div class="col-4 p-2 shadow p-3 mb-5 bg-body-tertiary rounded">
                 <form method="POST" action="/create_product">
                     <div class="mb-3">

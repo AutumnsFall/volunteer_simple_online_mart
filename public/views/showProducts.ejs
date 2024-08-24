@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Create Product</title>
+        <%- include('./partials/head'); %>
+        <link rel="stylesheet" href="../css/createProduct.css">
+    </head>
+    <body>
+        <div class="justify-content-center">
+            <div>
+                <h1 class="text-center">Create Product</h1>
+            </div>
+            <div class="row" style="margin-left: 5px; margin-right: 10px;">
+                <% products.forEach(product => { %>
+                    <div class="col-lg-3" style="padding: 0; margin-top: 5px; margin-bottom: 5px;">
+                        <div class="card" style="margin-left: 5px; margin-right: 5px;">
+                            <!-- <img src="<%= product.image %>" class="card-img-top" alt="..."> -->
+                            <div class="card-body">
+                                <h5 class="card-title"><%= product.name %></h5>
+                                <p class="card-text"><%= product.price %></p>
+                                <p class="card-text col-10 text-truncate"><%= product.description %></p>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </body>
+</html>
