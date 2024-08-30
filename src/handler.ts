@@ -13,9 +13,9 @@ export const createProductPostHandler = async (req: Request, res: Response) => {
         name: req.body.productName,
         price: req.body.productPrice as number,
         description: req.body.productDescription,
+        image: req.file?.filename || 'default.jpeg',
     } as Product;
     const result = await createProduct(product);
-    console.log('Product created:', result);
     res.render('createProduct', {
         product: result,
     });

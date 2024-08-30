@@ -15,7 +15,7 @@
                 </div>
             <% } %>
             <div class="col-4 p-2 shadow p-3 mb-5 bg-body-tertiary rounded">
-                <form method="POST" action="/create_product">
+                <form method="POST" action="/create_product" enctype="multipart/form-data">
                     <div class="mb-3">
                       <label for="productName" class="form-label">Product Name</label>
                       <input type="text" class="form-control" name="productName" id="productName" aria-describedby="productNameHelp">
@@ -27,6 +27,10 @@
                     <div class="mb-3">
                         <label for="productDescription" class="form-label">Product Description</label>
                         <textarea class="form-control" name="productDescription" id="productDescription" rows="1"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Default file input example</label>
+                        <input class="form-control" type="file" id="formFile" name="image">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
